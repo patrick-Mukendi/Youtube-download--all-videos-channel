@@ -1,0 +1,137 @@
+# Téléchargeur de vidéos YouTube avec yt-dlp
+
+Ce projet est une application de terminal basée sur Python qui utilise l'outil puissant `yt-dlp` pour télécharger des vidéos ou playlists à partir de YouTube avec une grande flexibilité.
+
+---
+
+## Fonctionnalités
+
+- Télécharge des vidéos et playlists complètes de YouTube.
+- Organise les vidéos téléchargées avec des noms et extensions appropriés.
+- Permet de spécifier l'emplacement de téléchargement.
+- Gère les erreurs pour assurer un téléchargement fluide.
+
+---
+
+## Prérequis
+
+### Outils nécessaires
+
+- **Python 3.x** :
+  Assurez-vous que Python est installé sur votre machine.
+  Téléchargez-le depuis [python.org](https://www.python.org/).
+
+- **yt-dlp** :
+  Installez `yt-dlp` via pip :
+  ```bash
+  pip install -U yt-dlp
+  ```
+
+### Vérification de l'installation
+
+Pour vérifier que `yt-dlp` est installé, exécutez :
+```bash
+yt-dlp --version
+```
+
+---
+
+## Installation
+
+1. Clonez ce dépôt GitHub :
+   ```bash
+   git clone https://github.com/your-username/yt-dlp-downloader.git
+   ```
+
+2. Accédez au répertoire du projet :
+   ```bash
+   cd yt-dlp-downloader
+   ```
+
+---
+
+## Utilisation
+
+### Commande de lancement
+
+Exécutez le script Python dans votre terminal :
+```bash
+python3 youtube_downloader.py
+```
+
+### Processus étape par étape
+
+1. **Entrez le lien YouTube** :
+   - Par exemple : `https://www.youtube.com/c/ExampleChannel`.
+
+2. **Spécifiez le dossier de destination** :
+   - Linux/MacOS : `/home/user/Videos/`
+   - Windows : `C:\Users\YourName\Videos\`
+
+3. **Patientez** pendant le téléchargement. Les vidéos seront enregistrées au chemin spécifié.
+
+---
+
+## Commandes alternatives avec yt-dlp
+
+Vous pouvez également exécuter directement `yt-dlp` pour personnaliser les téléchargements. Voici quelques exemples :
+
+- Télécharger une vidéo spécifique :
+  ```bash
+  yt-dlp "<lien de la vidéo>"
+  ```
+
+- Télécharger une playlist complète :
+  ```bash
+  yt-dlp --yes-playlist "<lien de la playlist>"
+  ```
+
+- Spécifier un chemin de sortie personnalisé :
+  ```bash
+  yt-dlp -o "/chemin/vers/dossier/%(title)s.%(ext)s" "<lien>"
+  ```
+
+---
+
+## Exemple de sortie
+
+### Entrée :
+```
+Entrez le lien de la chaîne YouTube : https://www.youtube.com/c/ExampleChannel
+Entrez l'emplacement pour enregistrer les vidéos : /home/user/Videos/
+```
+
+### Sortie :
+```
+=== Téléchargeur de vidéos YouTube ===
+Téléchargement en cours...
+=== Téléchargement terminé avec succès ! ===
+```
+
+---
+
+## Ressources utiles
+
+- [Documentation officielle de yt-dlp](https://github.com/yt-dlp/yt-dlp)
+- [Télécharger Python](https://www.python.org/)
+
+---
+
+## Contribution
+
+Les contributions sont les bienvenues ! Veuillez :
+
+1. Forker ce dépôt.
+2. Créer une branche pour vos modifications :
+   ```bash
+   git checkout -b feature/ma-modification
+   ```
+3. Soumettre une Pull Request.
+
+---
+
+## Remarque finale
+
+Si vous rencontrez un problème ou avez des suggestions, veuillez ouvrir une issue sur ce dépôt. 
+Merci de contribuer à rendre cet outil encore meilleur !
+Patrick Mukendi
