@@ -139,73 +139,95 @@ Patrick Mukendi
 ------------------------------
 
 # YouTube Channel Video Cloner
-📜 Description
+
+#📜 Description
+
 YouTube Channel Video Cloner est un script Python qui :
 
 Télécharge toutes les vidéos d'une chaîne YouTube (Chaîne A) à l'aide de yt-dlp.
 Ré-upload ces vidéos sur une autre chaîne YouTube (Chaîne B) en utilisant l'API YouTube Data v3.
-⚠️ Important : Veuillez respecter les droits d'auteur. Assurez-vous d'avoir l'autorisation explicite de la Chaîne A avant d'utiliser leurs vidéos.
+
+# ⚠️ Important : Veuillez respecter les droits d'auteur. Assurez-vous d'avoir l'autorisation explicite de la Chaîne A avant d'utiliser leurs vidéos.
+
 ----------------------------------------
-🚀 Fonctionnalités
+
+#🚀 Fonctionnalités
+
 Téléchargement de vidéos : Télécharge automatiquement toutes les vidéos d'une chaîne YouTube.
+
 Upload sur une autre chaîne : Re-upload les vidéos sur une autre chaîne via l'API YouTube Data.
+
 Personnalisation facile : Vous pouvez définir le titre, la description, les tags et la confidentialité des vidéos.
+
 -------------------------------------
-🛠️ Prérequis
-Logiciels et bibliothèques
-Python 3.7+
-yt-dlp
-google-auth-oauthlib
-google-api-python-client
-Compte Google API
+
+#🛠️ Prérequis
+
+ - Logiciels et bibliothèques
+Python 3.7+ yt-dlp
+
+- google-auth-oauthlib
+- google-api-python-client
+- Compte Google API
+  
 Créez un projet sur Google Cloud Console.
 Activez l'API YouTube Data v3.
 Configurez un OAuth 2.0 Client ID et téléchargez le fichier client_secrets.json.
-📦 Installation
+---
+
+#📦 Installation
+
 Clonez ce dépôt :
 
-bash
-Copier
-Modifier
+'''bash (Copier, Modifier)
 git clone https://github.com/<votre_nom_d_utilisateur>/youtube-channel-cloner.git
 cd youtube-channel-cloner
+'''
+
 Installez les dépendances :
 
-bash
-Copier
-Modifier
+'''bash (Copier, Modifier)
 pip install -r requirements.txt
+'''
+
 Placez le fichier client_secrets.json (obtenu depuis la console Google Cloud) dans le répertoire principal.
+
 ------------------------------------
-📚 Utilisation
+
+#📚 Utilisation
+
 1. Télécharger les vidéos de la chaîne A
 Exécutez la commande suivante pour télécharger toutes les vidéos d'une chaîne YouTube :
 
-bash
-Copier
-Modifier
+'''bash 
 yt-dlp -f best -o "videos/%(title)s.%(ext)s" https://www.youtube.com/c/<NomDeLaChaîneA>/videos
+'''
+
 Remplacez <NomDeLaChaîneA> par le nom ou l'URL de la chaîne cible.
-Les vidéos seront téléchargées dans le dossier videos.
+Les vidéos seront téléchargées dans le dossier videos. 
+
 2. Configurer l'upload
+   
 Modifiez les paramètres dans le script Python upload_videos.py pour personnaliser :
-Le titre
-La description
-Les tags
-La confidentialité (public, privé, non répertorié).
-3. Uploader les vidéos sur la chaîne B
+- Le titre
+- La description
+- Les tags
+- La confidentialité (public, privé, non répertorié).
+  
+1. Uploader les vidéos sur la chaîne B
 Exécutez le script Python pour uploader les vidéos sur la chaîne B :
 
-bash
-Copier
-Modifier
+'''bash
 python upload_videos.py
+'''
+
 --------------------------------
-📋 Exemple de Configuration
+
+#📋 Exemple de Configuration
+
 upload_videos.py (extrait)
-python
-Copier
-Modifier
+
+'''python
 upload_video(
     youtube,
     file_path="videos/video1.mp4",
@@ -214,36 +236,54 @@ upload_video(
     tags=["tag1", "tag2"],
     category_id="22"  # Catégorie : 22 pour "People & Blogs"
 )
+'''
+
 -------------------------------
-🚨 Avertissements
+
+#🚨 Avertissements
+
 Respect des droits d'auteur : N'utilisez pas ce script pour télécharger ou re-upload des vidéos sans autorisation.
+
 Quotas de l'API YouTube : Assurez-vous de ne pas dépasser les limites quotidiennes imposées par l'API.
 Vérifiez les politiques YouTube : Ce projet est destiné à des usages légitimes uniquement.
+
 -------------------------------
-🛠️ Développement
+
+#🛠️ Développement
+
 Pour contribuer :
+
 Forkez le projet.
-Créez une branche :
-bash
-Copier
-Modifier
+
+- Créez une branche :
+
+'''bash
 git checkout -b feature/ma-feature
-Commitez vos modifications :
-bash
-Copier
-Modifier
+'''
+
+- Commitez vos modifications :
+
+'''bash 
 git commit -m "Ajout d'une nouvelle fonctionnalité"
-Poussez votre branche :
-bash
-Copier
-Modifier
+'''
+
+- Poussez votre branche :
+
+'''bash 
 git push origin feature/ma-feature
-Ouvrez une Pull Request.
+'''
+
+- Ouvrez une Pull Request.
+
 -------------------------------
-🧑‍💻 Auteur
+
+#🧑‍💻 Auteur
+
 Patrick Mukendi Nyanguila
+
 Développeur passionné mobile et web
 *Gmail [mdipatrick5@gmail.com]
+
 -------------------------------
-📄 Licence
+#📄 Licence
 Ce projet est sous licence MIT. Consultez le fichier LICENSE pour plus d'informations.
