@@ -179,16 +179,16 @@ Configurez un OAuth 2.0 Client ID et téléchargez le fichier client_secrets.jso
 
 Clonez ce dépôt :
 
-'''bash (Copier, Modifier)
+```bash (Copier, Modifier)
 git clone https://github.com/<votre_nom_d_utilisateur>/youtube-channel-cloner.git
 cd youtube-channel-cloner
-'''
+```
 
 Installez les dépendances :
 
-'''bash (Copier, Modifier)
+```bash (Copier, Modifier)
 pip install -r requirements.txt
-'''
+```
 
 Placez le fichier client_secrets.json (obtenu depuis la console Google Cloud) dans le répertoire principal.
 
@@ -199,9 +199,9 @@ Placez le fichier client_secrets.json (obtenu depuis la console Google Cloud) da
 1. Télécharger les vidéos de la chaîne A
 Exécutez la commande suivante pour télécharger toutes les vidéos d'une chaîne YouTube :
 
-'''bash 
+```bash 
 yt-dlp -f best -o "videos/%(title)s.%(ext)s" https://www.youtube.com/c/<NomDeLaChaîneA>/videos
-'''
+```
 
 Remplacez <NomDeLaChaîneA> par le nom ou l'URL de la chaîne cible.
 Les vidéos seront téléchargées dans le dossier videos. 
@@ -217,9 +217,9 @@ Modifiez les paramètres dans le script Python upload_videos.py pour personnalis
 1. Uploader les vidéos sur la chaîne B
 Exécutez le script Python pour uploader les vidéos sur la chaîne B :
 
-'''bash
+```bash
 python upload_videos.py
-'''
+```
 
 --------------------------------
 
@@ -227,7 +227,7 @@ python upload_videos.py
 
 upload_videos.py (extrait)
 
-'''python
+```python
 upload_video(
     youtube,
     file_path="videos/video1.mp4",
@@ -236,7 +236,7 @@ upload_video(
     tags=["tag1", "tag2"],
     category_id="22"  # Catégorie : 22 pour "People & Blogs"
 )
-'''
+```
 
 -------------------------------
 
@@ -257,21 +257,21 @@ Forkez le projet.
 
 - Créez une branche :
 
-'''bash
+```bash
 git checkout -b feature/ma-feature
-'''
+```
 
 - Commitez vos modifications :
 
-'''bash 
+```bash 
 git commit -m "Ajout d'une nouvelle fonctionnalité"
-'''
+```
 
 - Poussez votre branche :
 
-'''bash 
+```bash 
 git push origin feature/ma-feature
-'''
+```
 
 - Ouvrez une Pull Request.
 
